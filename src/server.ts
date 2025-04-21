@@ -19,7 +19,6 @@ app.post('/', async (req: Request, res: Response) => {
     
     const shortenedURL = response.data.result_url
     res.json({shortenedURL})
-    console.log(shortenedURL);
   } catch(e){
     console.error('Something went wrong: ', e)
     res.status(500).json({error: 'Something went wrong, please try again.'})
